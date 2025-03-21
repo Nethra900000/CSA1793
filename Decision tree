@@ -1,0 +1,8 @@
+from sklearn.tree import DecisionTreeClassifier
+import numpy as np  # Import NumPy for handling array inputs
+X = np.array([[0, 0], [1, 0], [0, 1], [1, 1]])
+y = np.array([0, 1, 1, 0])  # XOR truth table
+model = DecisionTreeClassifier()
+model.fit(X, y)
+predictions = model.predict(np.array([[1, 1], [0, 0]]))
+print(predictions)
